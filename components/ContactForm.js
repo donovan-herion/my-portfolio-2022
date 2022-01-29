@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
-// import { Link } from "react-router-dom";
-import Fade from "react-reveal/Fade";
 
 function ContactForm({ english }) {
   useEffect(() => {
@@ -44,43 +42,39 @@ function ContactForm({ english }) {
     <div className="contact-form">
       <div>
         <div className="top">
-          {/* <Link to="/"> */}
           <a href="">
             <FontAwesomeIcon size="3x" color="#17bebb" icon={faTimes} />
           </a>
-          {/* </Link> */}
         </div>
       </div>
-      <Fade bottom>
-        <div>
-          <div className="centered-image">
-            <p dangerouslySetInnerHTML={{ __html: "< / >" }} />
-          </div>
-          <h2 className="contact-form-title">
-            {submitText ? (english ? "Thank you for your message. I'll get in touch very soon." : "Merci pour votre message. Je vous recontacterai au plus vite.") : english ? "Welcome to my contact page. How can I help you ?" : "Bienvenue sur ma page de contact. Comment puis-je vous aider ?"}
-          </h2>
-          <form method="POST" name="contact" className="contact-form-form" onSubmit={e => onSubmit(e, setSubmitText)}>
-            <input type="hidden" name="form-name" value="contact" />
-            <div className="name-email">
-              <div className="name">
-                <label htmlFor="name">{english ? "Name :" : "Nom :"}</label>
-                <input required type="text" name="name" />
-              </div>
-              <div className="email">
-                <label htmlFor="email">Email :</label>
-                <input required type="email" name="email" />
-              </div>
-            </div>
-            <div className="message">
-              <label htmlFor="message">Message :</label>
-              <textarea required name="message"></textarea>
-            </div>
-            <button className="btn" type="submit">
-              {submitText ? submitText : english ? "Let's do it !" : "C'est parti !"}
-            </button>
-          </form>
+      <div>
+        <div className="centered-image">
+          <p dangerouslySetInnerHTML={{ __html: "< / >" }} />
         </div>
-      </Fade>
+        <h2 className="contact-form-title">
+          {submitText ? (english ? "Thank you for your message. I'll get in touch very soon." : "Merci pour votre message. Je vous recontacterai au plus vite.") : english ? "Welcome to my contact page. How can I help you ?" : "Bienvenue sur ma page de contact. Comment puis-je vous aider ?"}
+        </h2>
+        <form method="POST" name="contact" className="contact-form-form" onSubmit={e => onSubmit(e, setSubmitText)}>
+          <input type="hidden" name="form-name" value="contact" />
+          <div className="name-email">
+            <div className="name">
+              <label htmlFor="name">{english ? "Name :" : "Nom :"}</label>
+              <input required type="text" name="name" />
+            </div>
+            <div className="email">
+              <label htmlFor="email">Email :</label>
+              <input required type="email" name="email" />
+            </div>
+          </div>
+          <div className="message">
+            <label htmlFor="message">Message :</label>
+            <textarea required name="message"></textarea>
+          </div>
+          <button className="btn" type="submit">
+            {submitText ? submitText : english ? "Let's do it !" : "C'est parti !"}
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

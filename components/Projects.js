@@ -3,7 +3,6 @@ import Banner from "./Banner";
 import Project from "./Project";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import Wobble from "react-reveal/Wobble";
 
 function Projects({ english }) {
   return (
@@ -43,12 +42,10 @@ function Projects({ english }) {
         video={"../video/dev-resto.mp4"}
       />
 
-      <Wobble delay={300}>
-        <button className="btn-more-github" onClick={() => window.open("https://github.com/donovan-herion", "_blank")}>
-          <FontAwesomeIcon icon={faGithub} />
-          {english ? " See more on Github" : " Voir plus sur Github"}
-        </button>
-      </Wobble>
+      <button className="btn-more-github" onClick={() => window.open("https://github.com/donovan-herion", "_blank")}>
+        <FontAwesomeIcon icon={faGithub} />
+        {english ? " See more on Github" : " Voir plus sur Github"}
+      </button>
     </>
   );
 }

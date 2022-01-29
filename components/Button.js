@@ -1,5 +1,3 @@
-import React from "react";
-
 function Button({ url, text, color }) {
   {
     if (color == "primary") {
