@@ -1,12 +1,12 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import { faDiscord, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 function Footer() {
-  let history = useHistory();
+  // let history = useHistory();
   return (
     <footer>
       <div className="container">
